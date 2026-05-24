@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Lightbulb, TrendingUp, Phone, MapPin, Users, ChevronRight } from 'lucide-react'
+import { Lightbulb, TrendingUp, ChevronRight } from 'lucide-react'
 
 const innovations = [
   {
@@ -91,31 +91,6 @@ export default function Innovation() {
                 <li>· 可享受绿色农业专项补贴、乡村振兴扶持等多重政策红利</li>
                 <li>· 碳减排量可纳入碳普惠交易，实现"减碳即增收"</li>
               </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact */}
-        <section className="mb-16">
-          <div className="flex items-center gap-3 mb-8">
-            <Phone className="w-6 h-6 text-emerald-400" />
-            <h2 className="text-2xl font-bold text-white">联系方式</h2>
-          </div>
-          <div className="glow-card rounded-2xl p-6 sm:p-8 grid sm:grid-cols-3 gap-6 text-center">
-            <div>
-              <Users className="w-8 h-8 text-emerald-400 mx-auto mb-3" />
-              <p className="text-sm text-gray-400 mb-1">联系人</p>
-              <p className="text-white font-bold">王运</p>
-            </div>
-            <div>
-              <Phone className="w-8 h-8 text-emerald-400 mx-auto mb-3" />
-              <p className="text-sm text-gray-400 mb-1">联系电话</p>
-              <p className="text-white font-bold">15241752991</p>
-            </div>
-            <div>
-              <MapPin className="w-8 h-8 text-emerald-400 mx-auto mb-3" />
-              <p className="text-sm text-gray-400 mb-1">地址</p>
-              <p className="text-white font-bold">新疆阿拉尔 · 843300</p>
             </div>
           </div>
         </section>
