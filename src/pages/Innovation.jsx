@@ -1,25 +1,31 @@
-import { Lightbulb, TrendingUp, Phone, MapPin, Users, School } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Lightbulb, TrendingUp, Phone, MapPin, Users, ChevronRight } from 'lucide-react'
 
 const innovations = [
   {
+    id: 'coupling-heating',
     title: '耦合高效加热节能创新',
     desc: '真空脉动与碳纤维红外辐射耦合技术，电热转化充分、热能直达物料内部，较传统工艺节能20%-30%，从源头降低能耗与碳排放。',
   },
   {
+    id: 'layered-temp-control',
     title: '分层精准控温降耗创新',
     desc: '分层独立加热、智能精准控温，干燥均匀度达96.22%，杜绝局部过热与无效运行，最大限度提升能源利用效率。',
   },
   {
+    id: 'water-recycle',
     title: '水资源闭环循环减废创新',
     desc: '构建冷凝水全回收回用体系，年节约清洁水资源10吨以上，废料循环利用，以资源循环促进节能减排。',
   },
   {
+    id: 'smart-control',
     title: '智能管控减损降碳创新',
     desc: '搭载智能监测与精准调控系统，将产后损耗率由行业10%-20%降至2%以内，减少原料浪费与隐性碳排放。',
   },
   {
+    id: 'low-carbon-business',
     title: '低碳商业化协同模式创新',
-    desc: '低成本、高适配、易推广，定价8.6万元，可享受绿色农业专项补贴，实现节能、降碳、增收同步落地。',
+    desc: '低成本、高适配、易推广，定价8万元，可享受绿色农业专项补贴，实现节能、降碳、增收同步落地。',
   },
 ]
 
@@ -45,15 +51,18 @@ export default function Innovation() {
           </div>
           <div className="space-y-5">
             {innovations.map((inv, idx) => (
-              <div key={idx} className="glow-card rounded-2xl p-5 sm:p-6 flex items-start gap-5">
-                <div className="w-10 h-10 rounded-xl bg-amber-400/10 flex items-center justify-center shrink-0 mt-0.5">
-                  <span className="text-amber-400 font-black text-lg">{idx + 1}</span>
+              <Link key={inv.id} to={`/innovation/${inv.id}`} className="no-underline">
+                <div className="glow-card rounded-2xl p-5 sm:p-6 flex items-start gap-5 hover:border-amber-400/20 transition-colors cursor-pointer group">
+                  <div className="w-10 h-10 rounded-xl bg-amber-400/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-amber-400 font-black text-lg">{idx + 1}</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">{inv.title}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">{inv.desc}</p>
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-gray-600 group-hover:text-amber-400 shrink-0 mt-1 transition-colors" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white mb-2">{inv.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{inv.desc}</p>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
@@ -77,7 +86,7 @@ export default function Innovation() {
             <div className="glow-card rounded-2xl p-6 sm:p-8">
               <h3 className="text-lg font-bold text-white mb-4">定价与政策红利</h3>
               <ul className="space-y-3 text-sm text-gray-400">
-                <li>· 设备定价仅<strong className="text-emerald-400">8.6万元</strong></li>
+                <li>· 设备定价仅<strong className="text-emerald-400">8万元</strong></li>
                 <li>· 远低于市场同类12万-17万元的高端节能设备</li>
                 <li>· 可享受绿色农业专项补贴、乡村振兴扶持等多重政策红利</li>
                 <li>· 碳减排量可纳入碳普惠交易，实现"减碳即增收"</li>
@@ -107,30 +116,6 @@ export default function Innovation() {
               <MapPin className="w-8 h-8 text-emerald-400 mx-auto mb-3" />
               <p className="text-sm text-gray-400 mb-1">地址</p>
               <p className="text-white font-bold">新疆阿拉尔 · 843300</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Team info */}
-        <section>
-          <div className="flex items-center gap-3 mb-6">
-            <School className="w-6 h-6 text-emerald-400" />
-            <h2 className="text-2xl font-bold text-white">团队信息</h2>
-          </div>
-          <div className="glow-card rounded-2xl p-6 sm:p-8">
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div>
-                <p className="text-sm text-gray-400 mb-1">设计者</p>
-                <p className="text-white font-semibold">王运，邹景洋，白鎔源</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-400 mb-1">指导教师</p>
-                <p className="text-white font-semibold">杨舟洋，弋晓康</p>
-              </div>
-              <div className="sm:col-span-2">
-                <p className="text-sm text-gray-400 mb-1">所属院校</p>
-                <p className="text-white font-semibold">塔里木大学 · 机械电气工程学院</p>
-              </div>
             </div>
           </div>
         </section>

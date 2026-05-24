@@ -110,7 +110,7 @@ export default function Compare() {
             <p className="text-sm text-gray-400">每吨加工碳减排量（较热风）</p>
           </div>
           <div className="glow-card rounded-2xl p-6 text-center">
-            <div className="gradient-text text-3xl font-black mb-2">8.6 万元</div>
+            <div className="gradient-text text-3xl font-black mb-2">8 万元</div>
             <p className="text-sm text-gray-400">设备定价，远低于同类12-17万元</p>
           </div>
         </section>

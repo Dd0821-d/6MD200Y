@@ -13,7 +13,7 @@ const params = [
   { label: '营养保留率', value: '85-95', unit: '%', sub: '传统40-50%' },
   { label: '温控精度', value: '0.22', unit: '℃', sub: '±精准调控' },
   { label: '碳排放', value: '573.13', unit: 'kg/吨', sub: '烘房干燥1422kg' },
-  { label: '设备定价', value: '8.6', unit: '万元', sub: '同类12-17万元' },
+  { label: '设备定价', value: '8', unit: '万元', sub: '同类12-17万元' },
   { label: '年节水', value: '10', unit: '吨+', sub: '冷凝水全回收' },
 ]
 
@@ -41,7 +41,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-white mb-3 leading-none">
-              6MD<span className="gradient-text">-</span>200Y
+6MD<span className="gradient-text">-</span>200Y
             </h1>
             <p className="text-xl sm:text-3xl lg:text-4xl text-emerald-400 font-bold mb-3 tracking-wide">
               真空脉动节能干燥设备
